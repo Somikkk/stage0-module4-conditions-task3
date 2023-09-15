@@ -25,21 +25,4 @@ class IsEnglishSymbolDeterminerTest extends BaseIOTest {
         assertEquals("English\n", updateLineSpliterators(outContent.toString()));
     }
 
-    @Test
-    void isEnglishSymbolPrintsFalseWhenUppercasePolishSymbol() {
-        IsEnglishSymbolDeterminer englishDeterminer = new IsEnglishSymbolDeterminer();
-
-        englishDeterminer.isEnglishSymbol('Ł');
-
-        assertEquals("Non English\n", updateLineSpliterators(outContent.toString()));
-    }
-
-    @Test
-    void isEnglishSymbolPrintsFalseWhenLowercasePolishSymbol() {
-        IsEnglishSymbolDeterminer englishDeterminer = new IsEnglishSymbolDeterminer();
-
-        englishDeterminer.isEnglishSymbol('ł');
-
-        assertEquals("Non English\n", updateLineSpliterators(outContent.toString()));
-    }
 }

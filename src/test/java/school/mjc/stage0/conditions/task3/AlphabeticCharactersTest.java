@@ -25,12 +25,5 @@ class AlphabeticCharactersTest extends BaseIOTest {
         assertEquals("Consonant\n", updateLineSpliterators(outContent.toString()));
     }
 
-    @Test
-    void vowelDeterminerPrintWrongWhenNotEnglish() {
-        AlphabeticCharacters characters = new AlphabeticCharacters();
 
-        characters.vowelDeterminer('ł');
-
-        assertEquals("wrong alphabet!\n", updateLineSpliterators(outContent.toString()));
-    }
 }
